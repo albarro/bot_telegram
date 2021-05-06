@@ -6,6 +6,7 @@ let opcionesInsulto = ["Tu puta mitad"];
 const utilidades = require("./util.js")
 const opcionesDiasJSON = require('../recursos/opcionesDias.json');
 const opcionesInsultoJSON = require('../recursos/opcionesInsulto.json');
+const tokenJSON = require('../recursos/token.json')
 
 let cargado = false;
 
@@ -51,10 +52,16 @@ function getOpcionesInsulto(){
     return opcionesInsulto[utilidades.getRandomEntero(0, opcionesInsulto.length)];
 }
 
+
+function getToken(){
+    return tokenJSON.Token;
+}
+
 const opciones  = {
     opcionesDias: getOpcionesDias,
     opcionesHoras: getOpcionesHoras,
-    opcionesInsulto: getOpcionesInsulto
+    opcionesInsulto: getOpcionesInsulto,
+    token: getToken()
 }
 module.exports = opciones;
 

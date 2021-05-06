@@ -5,7 +5,7 @@ const comprobadorSpam = require('./utilidades/anti-spam');
 const cambioMonedas = require('./utilidades/cambioMondedas');
 
 //Token del bot
-const token = '1702690589:AAFpot2wyaFW3NzzUFn-btgI7FQiOmr62ks';
+const token = opciones.token;
 
 //Bot
 const bot = new TelegramBot(token, {polling: true});

@@ -1,4 +1,6 @@
 
-recursos/token.json
+ficheros/token.json
+
+node_modules/
 
 .idea/

@@ -1,0 +1,23 @@
+{
+  "activaciones": [
+    {
+      "activador": ["gusbabot", "mero"],
+      "hijos" : [
+        {
+        "activador": ["funciones"],
+        "respuesta": [{"texto":"Hola mis funciones actuales son: \n/encuestaDia sirve para crear la vieja y confiable encuesta del dia de rol \n/encuesta_hora sirve para crear la encuesta de las horas \n/convertir convierte monedas, ej: /convertir 420 po pc (Convertiría 420 monedas de oro a cobre)"}]
+        },
+        {
+          "activador": ["gusbabot", "mero"],
+          "condicion": "return texto.indexOf(clave) === 0",
+          "respuesta": [{"texto":"Hola "}, {"parametro":"emisor"} ,{"texto":" que chamacotas deseas"}]
+        }
+      ],
+      "respuesta":  [{"parametro": "insulto"}]
+    },
+    {
+      "activador": ["psoe","izquierda", "comunistas","socialismo","elecciones","ayuso","podemos","unidas","mas madrid", "ayuso","pp", "ciudadanos", "vox"],
+      "respuesta": [{"texto":"LLevo votando a a la izquierda desde que tengo 18 años pero tras ver la movida de los putos moros de marruecos voy a votar a un partido que de verdad defienda España"}]
+    }
+  ]
+}

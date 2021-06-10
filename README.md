@@ -1,1 +1,2 @@
-bot_telegram
+# Bot telegram
+Pequeño bot de telegram usando nodejs

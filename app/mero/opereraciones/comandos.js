@@ -123,12 +123,25 @@ var PoliSanchez = /** @class */ (function (_super) {
     };
     return PoliSanchez;
 }(ComandoBase));
+var PowerRanger = /** @class */ (function (_super) {
+    __extends(PowerRanger, _super);
+    function PowerRanger(mero) {
+        var _this = _super.call(this, mero, "power_ranger") || this;
+        _this.colores = ["Rojo", "Negro", "Blanco", "Azul", "Verde", "Amarillo", "Marron", "CUM"];
+        return _this;
+    }
+    PowerRanger.prototype.comando = function (msg) {
+        this.mero.enviarAviso(msg, this.colores[util.getRandomEntero(0, this.colores.length)]);
+    };
+    return PowerRanger;
+}(ComandoBase));
 function cargarComandos(mero) {
     var comandos = [];
     comandos.push(new EncuestaDia(mero));
     comandos.push(new EncuestaHora(mero));
     comandos.push(new ConvertirDinero(mero));
     comandos.push(new PoliSanchez(mero));
+    comandos.push(new PowerRanger(mero));
     return comandos;
 }
 exports.cargarComandos = cargarComandos;

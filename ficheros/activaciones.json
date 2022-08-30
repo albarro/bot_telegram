@@ -18,6 +18,10 @@
     {
       "activador": ["psoe","izquierda", "comunistas","socialismo","elecciones","ayuso","podemos","unidas","mas madrid", "ayuso","pp", "ciudadanos", "vox"],
       "respuesta": [{"texto":"LLevo votando a a la izquierda desde que tengo 18 años pero tras ver la movida de los putos moros de marruecos voy a votar a un partido que de verdad defienda España"}]
+    },
+    {
+      "activador":["negro"],
+      "respuesta": [{"parametro":"emisor"}, {"texto":" sera baneado de los servidores de ubisoft por lenguaje ofensivo"}]
     }
   ]
 }

@@ -135,6 +135,17 @@ class PoliSanchez extends ComandoBase{
     }
 }
 
+class PowerRanger extends ComandoBase{
+    private colores = ["Rojo","Negro","Blanco","Azul","Verde","Amarillo","Marron","CUM"];
+    constructor(mero) {
+        super(mero, "power_ranger");
+    }
+
+    comando(msg: Mensaje) {
+        this.mero.enviarAviso(msg, this.colores[util.getRandomEntero(0, this.colores.length)]);
+    }
+}
+
 export function cargarComandos(mero: Mero): Comando[]{
     let comandos = [];
 
@@ -142,6 +153,7 @@ export function cargarComandos(mero: Mero): Comando[]{
     comandos.push(new EncuestaHora(mero));
     comandos.push(new ConvertirDinero(mero));
     comandos.push(new PoliSanchez(mero));
+    comandos.push(new PowerRanger(mero));
 
      return comandos;
 }
